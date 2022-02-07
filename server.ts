@@ -14,9 +14,12 @@ const connectionString = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@cluster0.m
 mongoose.connect(connectionString);
 */
 
-//mongoose.connect("mongodb+srv://lauraculligan:Matthew@cluster0.m8jeh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+const mongoString = "mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.net/tuiter?retryWrites=true&w=majority";
 
-mongoose.connect('mongodb://localhost:27017/tuiter');
+mongoose.connect(mongoString);
+
+
+//mongoose.connect('mongodb://localhost:27017/tuiter');
 
 // create RESTful Web service API
 const app = express();
