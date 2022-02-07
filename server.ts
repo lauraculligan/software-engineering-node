@@ -18,7 +18,6 @@ const mongoString = "mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.
 
 mongoose.connect(mongoString);
 
-
 //mongoose.connect('mongodb://localhost:27017/tuiter');
 
 // create RESTful Web service API
