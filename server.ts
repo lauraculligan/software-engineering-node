@@ -31,8 +31,8 @@ app.get('/', (req: Request, res: Response) =>
 app.get('/add/:a/:b', (req: Request, res: Response) =>
     res.send(req.params.a + req.params.b));
 
-const userController = new UserController(app, new UserDao());
-const tuitController = new TuitController(app, new TuitDao());
+//const userController = new UserController(app, new UserDao()); //remove because it is now in controller class
+//const tuitController = new TuitController(app, new TuitDao()); //remove because it is now in controller class
 
 const PORT = 4000;
 app.listen(process.env.PORT || PORT);
