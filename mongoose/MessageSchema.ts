@@ -1,3 +1,6 @@
+/**
+ * @file Implements mongoose model structure for the messages collection
+ */
 import mongoose, {Schema} from "mongoose";
 import Message from "../models/Message";
 

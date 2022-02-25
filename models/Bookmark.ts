@@ -7,7 +7,7 @@ import User from "./User";
 /**
  * @typedef Bookmark Represents bookmarks relationship between a user and a tuit,
  * as in a user bookmarks a tuit
- * @property {Tuit} tuit Tuit being bookmarked
+ * @property {Tuit} bookmarkedTuit Tuit being bookmarked
  * @property {User} bookmarkedBy User bookmarking the tuit
  */
 

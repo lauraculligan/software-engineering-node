@@ -1,3 +1,6 @@
+/**
+ * @file Implements mongoose model structure for the tuits collection
+ */
 import mongoose, {Schema} from "mongoose";
 import UserModel from "./UserModel";
 import Tuit from "../models/Tuit";
