@@ -36,10 +36,9 @@ public static getInstance = (app: Express): FollowController => {
         FollowController.followController = new FollowController();
         app.post("/api/users/:uidFollowing/follows/:uidFollowed", FollowController.followController.userFollowsUser);
         app.delete("/api/users/:uidFollowing/unfollows/:uidFollowed", FollowController.followController.userUnfollowsUser);
-        app.get("/api/users/:uidFollowing/follows", FollowController.followController.findAllUsersTheyFollow);
-        app.get("/api/users/:uidFollowed/follows", FollowController.followController.findAllUsersFollowingThem);
-        //app.get("/api/followers/", FollowController.followController.findAllUsersTheyFollow);
-        //app.get("/api/followers/", FollowController.followController.findAllUsersFollowingThem);
+        //app.get("/api/users/:uid/follows", FollowController.followController.findAllUsersTheyFollow);
+        app.get("/api/users/:uid/follows", FollowController.followController.findAllUsersFollowingThem);
+        app.get("/api/followers", FollowController.followController.findAllUsersTheyFollow);
     }
     return FollowController.followController;
 }
@@ -77,7 +76,7 @@ private constructor() {}
      * body formatted as JSON arrays containing the user objects that were liked
      */
     findAllUsersTheyFollow = (req: Request, res: Response) =>
-        FollowController.followDao.findAllUsersFollowingThem(req.params.uidFollowing)
+        FollowController.followDao.findAllUsersFollowingThem(req.params.uid)
             .then(follows => res.json(follows));
 
     /**
@@ -88,7 +87,7 @@ private constructor() {}
      * body formatted as JSON arrays containing the user objects that were liked
      */
     findAllUsersFollowingThem = (req: Request, res: Response) =>
-        FollowController.followDao.findAllUsersFollowingThem(req.params.uidFollowed)
+        FollowController.followDao.findAllUsersFollowingThem(req.params.uid)
             .then(follows => res.json(follows));
 
 };
