@@ -37,8 +37,10 @@ public static getInstance = (app: Express): FollowController => {
         app.post("/api/users/:uidFollowing/follows/:uidFollowed", FollowController.followController.userFollowsUser);
         app.delete("/api/users/:uidFollowing/unfollows/:uidFollowed", FollowController.followController.userUnfollowsUser);
         //app.get("/api/users/:uid/follows", FollowController.followController.findAllUsersTheyFollow);
-        app.get("/api/users/:uid/follows", FollowController.followController.findAllUsersFollowingThem);
+        //app.get("/api/users/:uid/follows", FollowController.followController.findAllUsersFollowingThem);
         app.get("/api/follows/:uid", FollowController.followController.findAllUsersTheyFollow);
+        app.get("/api/following/:uid", FollowController.followController.findAllUsersFollowingThem);
+
     }
     return FollowController.followController;
 }
