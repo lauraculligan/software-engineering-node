@@ -78,7 +78,7 @@ private constructor() {}
      * body formatted as JSON arrays containing the user objects that were liked
      */
     findAllUsersTheyFollow = (req: Request, res: Response) =>
-        FollowController.followDao.findAllUsersFollowingThem(req.params.uid)
+        FollowController.followDao.findAllUsersTheyFollow(req.params.uid)
             .then(follows => res.json(follows));
 
     /**
