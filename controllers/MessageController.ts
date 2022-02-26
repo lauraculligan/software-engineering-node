@@ -10,10 +10,10 @@ import MessageControllerI from "../interfaces/MessageControllerI";
  * @class MessageController Implements RESTful Web service API for messages resource.
  * Defines the following HTTP endpoints:
  * <ul>
- *     <li>POST /api/users/:uid/messages to create a new message instance
+ *     <li>POST /api/users/:uidTo/messages/:uidFrom to create a new message instance
  *     being sent from a given user</li>
- *     <li>GET /api/users/:uid/messages/:uidTo to retrieve messages sent to the user</li>
- *     <li>GET /api/users/:uid/messages/:uidFrom to retrieve messages sent by the user </li>
+ *     <li>GET /api/messagesTo/:uid to retrieve messages sent to the user</li>
+ *     <li>GET /api/messagesFrom/:uid to retrieve messages sent by the user </li>
  *     <li>DELETE /api/messages/:mid to remove a particular message instance</li>
  * </ul>
  * @property {MessageDao} MessageDao Singleton DAO implementing message CRUD operations

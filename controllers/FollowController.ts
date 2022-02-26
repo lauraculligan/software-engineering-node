@@ -9,13 +9,13 @@ import FollowControllerI from "../interfaces/FollowControllerI";
  * @class FollowController Implements RESTful Web service API for follows resource.
  * Defines the following HTTP endpoints:
  * <ul>
- *     <li>GET /api/users/:uid/follows to retrieve all the users that have followed a user
+ *     <li>GET /api/following/:uid to retrieve all the users that have followed a user
  *     </li>
- *     <li>GET /api/users/:uid/follows to retrieve all the users a user is following
+ *     <li>GET /api/follows/:uid to retrieve all the users a user is following
  *     </li>
- *     <li>POST /api/users/:uid/follows/:userFollowed to record that a user follows another user
+ *     <li>POST /api/users/:uidFollowing/follows/:uidFollowed to record that a user follows another user
  *     </li>
- *     <li>DELETE /api/users/:uid/unfollows/:uid to record that a user unfollows another user
+ *     <li>DELETE /api/users/:uidFollowing/unfollows/:uidFollowed to record that a user unfollows another user
  *     </li>
  * </ul>
  * @property {FollowDao} followDao Singleton DAO implementing follows CRUD operations
