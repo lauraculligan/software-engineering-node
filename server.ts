@@ -21,6 +21,7 @@ import FollowController from "./controllers/FollowController";
 import BookmarkController from "./controllers/BookmarkController";
 import MessageController from "./controllers/MessageController";
 import mongoose from "mongoose";
+var cors = require('cors')
 
 // connect to the database
 
@@ -39,8 +40,9 @@ mongoose.connect(mongoString);
 
 // create RESTful Web service API
 const app = express();
-app.use(express.json());
-app.use(express.urlencoded());
+//app.use(express.json());
+//app.use(express.urlencoded());
+app.use(cors());
 
 app.get('/', (req: Request, res: Response) =>
     res.send('Welcome!'));
