@@ -18,6 +18,7 @@ import LikeController from "./controllers/LikeController";
 import mongoose from "mongoose";
 var cors = require('cors')
 
+/*
 // build the connection string
 const PROTOCOL = "mongodb+srv";
 const DB_USERNAME = process.env.DB_USERNAME;
@@ -28,6 +29,10 @@ const DB_QUERY = "retryWrites=true&w=majority";
 const connectionString = `${PROTOCOL}://${DB_USERNAME}:${DB_PASSWORD}@${HOST}/${DB_NAME}?${DB_QUERY}`;
 // connect to the database
 mongoose.connect(connectionString);
+
+ */
+
+mongoose.connect("mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 const app = express();
 app.use(express.json());
