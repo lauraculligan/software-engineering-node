@@ -9,12 +9,12 @@ import mongoose from "mongoose";
 
 /*
 const DB_USERNAME = process.env.lauraculligan;
-const DB_PASSWORD = process.env.Matthew;
+const DB_PASSWORD = process.env.<password>;
 const connectionString = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@cluster0.m8jeh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 mongoose.connect(connectionString);
 */
 
-const mongoString = "mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.net/tuiter?retryWrites=true&w=majority";
+const mongoString = "mongodb+srv://lauraculligan:<password>@cluster0.aeetd.mongodb.net/tuiter?retryWrites=true&w=majority";
 
 mongoose.connect(mongoString);
 
