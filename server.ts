@@ -32,6 +32,7 @@ mongoose.connect(connectionString);
 
  */
 
+//todo: fill in username and password if using!!!
 mongoose.connect("mongodb+srv://</username>:<password>@cluster0.aeetd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 const app = express();
