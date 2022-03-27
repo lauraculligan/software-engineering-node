@@ -19,8 +19,8 @@ import SessionController from "./controllers/SessionController";
 import AuthenticationController from "./controllers/AuthenticationController";
 import mongoose from "mongoose";
 import GroupController from "./controllers/GroupController";
-const cors = require("cors");
-const session = require("express-session");
+var cors = require("cors");
+var session = require("express-session");
 
 //todo: fill in username and password (before pushing to heroku) if using!!!
 mongoose.connect("mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
@@ -36,6 +36,7 @@ let sess = {
     secret: SECRET,
     cookie: {
         secure: false,
+        sameSite: false
     }
 }
 

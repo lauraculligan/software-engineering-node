@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import User from "../models/users/User";
-// axios.defaults.baseURL = 'http://localhost:4000/api';
+//axios.defaults.baseURL = 'http://localhost:4000/api';
 axios.defaults.baseURL = 'https://fierce-river-96181.herokuapp.com/api';
 
 const findAllUsers = async () =>
