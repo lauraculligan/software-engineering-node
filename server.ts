@@ -33,10 +33,11 @@ app.use(cors({
 
 const SECRET = 'process.env.SECRET';
 let sess = {
-    secret: SECRET,
+    secret: process.env.SECRET,
+    proxy: true,
     cookie: {
         secure: true,
-        sameSite: "none"
+        sameSite: 'none'
     }
 }
 
