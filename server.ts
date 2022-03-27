@@ -19,7 +19,7 @@ import SessionController from "./controllers/SessionController";
 import AuthenticationController from "./controllers/AuthenticationController";
 import mongoose from "mongoose";
 import GroupController from "./controllers/GroupController";
-var cors = require("cors");
+var cors = require("cors")
 var session = require("express-session");
 
 //todo: fill in username and password (before pushing to heroku) if using!!!
@@ -35,8 +35,8 @@ const SECRET = 'process.env.SECRET';
 let sess = {
     secret: SECRET,
     cookie: {
-        secure: false,
-        sameSite: false
+        secure: true,
+        sameSite: "none"
     }
 }
 
