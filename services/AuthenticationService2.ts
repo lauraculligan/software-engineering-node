@@ -3,15 +3,8 @@ import mongoose from "mongoose";
 
 const userDao: UserDao = UserDao.getInstance();
 
-const PROTOCOL = "mongodb+srv";
-const DB_USERNAME = "lauraculligan";
-const DB_PASSWORD = "Matthew";
-const HOST = "cluster0.m8jeh.mongodb.net";
-const DB_NAME = "myFirstDatabase";
-const DB_QUERY = "retryWrites=true&w=majority";
-const connectionString = `${PROTOCOL}://${DB_USERNAME}:${DB_PASSWORD}@${HOST}/${DB_NAME}?${DB_QUERY}`;
-// connect to the database
-mongoose.connect(connectionString);
+//todo: fill in username and password (before pushing to heroku) if using!!!
+mongoose.connect("mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 
 export const login = async (u: string, p: string) => {
