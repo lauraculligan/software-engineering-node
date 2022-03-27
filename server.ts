@@ -19,8 +19,8 @@ import SessionController from "./controllers/SessionController";
 import AuthenticationController from "./controllers/AuthenticationController";
 import mongoose from "mongoose";
 import GroupController from "./controllers/GroupController";
-var cors = require("cors")
-var session = require("express-session");
+let cors = require("cors")
+let session = require("express-session");
 
 //todo: fill in username and password (before pushing to heroku) if using!!!
 mongoose.connect("mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
@@ -28,12 +28,12 @@ mongoose.connect("mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.net
 const app = express();
 app.use(cors({
     credentials: true,
-    origin: 'https://illustrious-druid-2b5858.netlify.app/'
+    origin: 'https://illustrious-druid-2b5858.netlify.app'
 }));
 
 const SECRET = 'process.env.SECRET';
 let sess = {
-    secret: process.env.SECRET,
+    secret: SECRET,
     proxy: true,
     cookie: {
         secure: true,
