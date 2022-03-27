@@ -38,7 +38,7 @@ let sess = {
     resave: true,
     proxy: true,
     cookie: {
-        secure: true,
+        secure: false,
         sameSite: 'none'
     }
 }
