@@ -43,7 +43,7 @@ let sess = {
     }
 }
 
-const ENVIRONMENT = 'PRODUCTION';
+const ENVIRONMENT = process.env.ENVIRONMENT;
 if (ENVIRONMENT === 'PRODUCTION') {
     app.set('trust proxy', 1) // trust first proxy
     sess.cookie.secure = true // serve secure cookies
