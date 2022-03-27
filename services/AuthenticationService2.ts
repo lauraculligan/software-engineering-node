@@ -4,8 +4,8 @@ import mongoose from "mongoose";
 const userDao: UserDao = UserDao.getInstance();
 
 const PROTOCOL = "mongodb+srv";
-const DB_USERNAME = process.env.DB_USERNAME;
-const DB_PASSWORD = process.env.DB_PASSWORD;
+const DB_USERNAME = "lauraculligan";
+const DB_PASSWORD = "Matthew";
 const HOST = "cluster0.m8jeh.mongodb.net";
 const DB_NAME = "myFirstDatabase";
 const DB_QUERY = "retryWrites=true&w=majority";

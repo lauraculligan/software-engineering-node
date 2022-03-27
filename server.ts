@@ -24,8 +24,8 @@ const session = require("express-session");
 
 // build the connection string
 const PROTOCOL = "mongodb+srv";
-const DB_USERNAME = process.env.DB_USERNAME;
-const DB_PASSWORD = process.env.DB_PASSWORD;
+const DB_USERNAME = "lauraculligan";
+const DB_PASSWORD = "Matthew";
 const HOST = "cluster0.m8jeh.mongodb.net";
 const DB_NAME = "myFirstDatabase";
 const DB_QUERY = "retryWrites=true&w=majority";
@@ -36,7 +36,7 @@ mongoose.connect(connectionString);
 const app = express();
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3000'
+    origin: 'https://illustrious-druid-2b5858.netlify.app/'
 }));
 
 const SECRET = 'process.env.SECRET';

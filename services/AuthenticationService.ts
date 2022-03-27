@@ -4,8 +4,8 @@ import mongoose from "mongoose";
 const userDao: UserDao = UserDao.getInstance();
 
 const PROTOCOL = "mongodb+srv";
-const DB_USERNAME = "giuseppi";//process.env.DB_USERNAME;
-const DB_PASSWORD = "supersecretpassword";//process.env.DB_PASSWORD;
+const DB_USERNAME = "lauraculligan";//process.env.DB_USERNAME;
+const DB_PASSWORD = "Matthew";//process.env.DB_PASSWORD;
 const HOST = "cluster0.m8jeh.mongodb.net";
 const DB_NAME = "myFirstDatabase";
 const DB_QUERY = "retryWrites=true&w=majority";
@@ -80,8 +80,8 @@ export const giveRaise = (raise: number) => {
 // register('alice008', 'alice234', 'alice234@gmail.com')
 //   .then(user => console.log(user))
 //
-login('alice008', 'alice234')
-  .then(user => console.log(user))
+//login('alice008', 'alice234')
+//  .then(user => console.log(user))
 
 // userDao.findAllUsers()
 //   .then(users => console.log(users));
