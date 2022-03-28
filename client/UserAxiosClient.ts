@@ -1,13 +1,10 @@
 import axios, { AxiosResponse } from 'axios';
 import User from "../models/users/User";
-<<<<<<< HEAD
-// axios.defaults.baseURL = 'http://localhost:4000/api';
-axios.defaults.baseURL = 'https://fse-tuiter-node-a4.herokuapp.com/api';
-=======
+
 //axios.defaults.baseURL = 'http://localhost:4000/api';
 //TODO put your own heroku link
 axios.defaults.baseURL = 'https://fierce-river-96181.herokuapp.com/api';
->>>>>>> a4_login
+
 
 const findAllUsers = async () =>
     await axios.get('/users');
