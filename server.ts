@@ -19,36 +19,46 @@ import SessionController from "./controllers/SessionController";
 import AuthenticationController from "./controllers/AuthenticationController";
 import mongoose from "mongoose";
 import GroupController from "./controllers/GroupController";
-const cors = require("cors");
-const session = require("express-session");
+let cors = require("cors")
+let session = require("express-session");
 
 //todo: fill in username and password (before pushing to heroku) if using!!!
-mongoose.connect("mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+
+mongoose.connect("mongodb+srv://<username>:<password>@cluster0.aeetd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+
 
 const app = express();
 app.use(cors({
     credentials: true,
-    //origin: 'http://localhost:3000'
-    origin: 'https://rainbow-alpaca-16f49f.netlify.app/'
+    origin: 'https://illustrious-druid-2b5858.netlify.app'
 }));
 
 const SECRET = 'process.env.SECRET';
 let sess = {
     secret: SECRET,
-    saveUninitialized: true,
-    resave: true,
+    proxy: true,
     cookie: {
-        secure: false
+        secure: true,
+        sameSite: 'none'
     }
 }
 
-if (process.env.ENVIRONMENT === 'PRODUCTION') {
+const ENVIRONMENT = process.env.ENVIRONMENT;
+if (ENVIRONMENT === 'PRODUCTION') {
     app.set('trust proxy', 1) // trust first proxy
     sess.cookie.secure = true // serve secure cookies
 }
 
 app.use(session(sess))
 app.use(express.json());
+
+/*
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://illustrious-druid-2b5858.netlify.app/"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+*/
 
 app.get('/', (req: Request, res: Response) =>
     res.send('Welcome!'));
