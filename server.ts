@@ -25,7 +25,7 @@ let session = require("express-session");
 
 //todo: fill in username and password (before pushing to heroku) if using!!!
 
-mongoose.connect("mongodb+srv://lauraculligan:Matthew@cluster0.aeetd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://<username>:<password>@cluster0.aeetd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 
 const app = express();
