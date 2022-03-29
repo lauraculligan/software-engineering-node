@@ -19,7 +19,7 @@ import TuitDao from "../daos/TuitDao";
  *     <li>DELETE /api/users/:uid/undislikes/:tid to record that a user
  *     no longer dislikes a tuit</li>
  * </ul>
- * @property {LikeDao} dislikeDao Singleton DAO implementing dislikes CRUD operations
+ * @property {DisLikeDao} dislikeDao Singleton DAO implementing dislikes CRUD operations
  * @property {DisLikeController} DisLikeController Singleton controller implementing
  * RESTful Web service API
  */
